@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --primary-color: rgb(112, 210, 255);   /* Example primary blue-green */
+  --secondary-color: rgb(75, 177, 255); /* Example lighter secondary shade */
+  --tertiary-color: rgb(69, 122, 255);
+  --border-color: rgb(27, 111, 160);
+}
+
+button {
+    padding: 5px;
+    color: white;
+    border: var(--border-color) 5px solid;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+button a {
+    text-decoration: none;
+}
+button:hover {
+    border: var(--border-color) 5px solid;
+    background-color: rgb(35, 146, 206);
+    transform: scale(0.9); 
+}
+button a:hover {
+    color: aqua;
+}
+
+a {
+    color: rgb(70, 38, 156);
+    transition: all 0.25s ease-in-out;
+}
+
+a:hover {
+    color: rgb(47, 147, 255);
+}
+
+header {
+    display: flex;
+    padding: 10px;
+    color: white;
+    font-family: 'Caveat Brush';
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+}
+
+footer {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-family: Arial;
+    font-size: x-large;
+}
+
+/*GENERAL CUSTOM CLASS*/
+.A-Clean {
+    text-decoration: none;
+    color: white;
+}
+
+.A-Clean:hover {
+    color: white
+}
+
+.Font-ComicBold {
+    font-family: 'Comic Neue';
+    font-weight: 800;
+}
+
+.ShadowedBox {
+    box-shadow: 2px 2px 8px rgb(56, 44, 108);
+}
+
+.SoftShadowedBox {
+    box-shadow: 5px 5px 8px rgb(104, 135, 196);
+}
+
+.Navigation {
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    transition: all 0.25s ease-in-out;
+}
+
+.Navigation:hover {
+    color: aqua;
+}
+
+/*CUSTOM CLASS*/
+
+.H2-Special1 {
+    font-size: 64px;
+    color: var(--secondary-color);
+    font-family: 'Caveat Brush';
+}
+
+.H2-Special2 {
+    text-align: center;
+    font-size: 55px;
+    color: var(--secondary-color);
+    font-family: 'Caveat Brush';
+}
+
+.ImageBanner {
+    background-image: url("https://i.pinimg.com/1200x/17/76/a3/1776a386dc90caac79d61221e15d9a7a.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.SearchBarHome {
+    display: flex;
+    padding: 10px;
+    padding-left: 5%;
+}
+
+.TopImage{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+}
+
+.TopImageTitle {
+    text-align: center;
+    font-family: 'Comic Neue';
+    font-weight: 800;
+}
+
+.LandingFrame1 {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--tertiary-color);
+}
+
+.LandingTextFrame1{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+}
+
+/****************/
+
+.FormLogin {
+    padding: 10px;
+    margin-left: 30%;
+    margin-right: 40%;
+    width: 30%;
+}
+
+.Input1 {
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: large;
+    width: 100%;
+    border: rgb(22, 117, 205) 5px solid;
+    background-color: rgb(40, 176, 255);
+}
+
+.Input1::placeholder {
+    color: rgb(169, 232, 255);
+}
