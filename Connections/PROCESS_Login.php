@@ -45,7 +45,6 @@ else if ($_POST['Method'] == "SignUp") {
     // Insert into database
     $Statement = $ServerConnection->prepare("INSERT INTO User (Username, Email, NamaLengkap, Alamat, Password) VALUES (?, ?, ?, ?, ?)");
     $Statement->bind_param("sssss", $Username, $Email, $NamaLengkap, $Alamat, $PasswordHash);
-
     if ($Statement->execute()) {
         echo "Account created successfully! ✅";
         header("Location: http://localhost/snappycloud/");
