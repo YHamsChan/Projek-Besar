@@ -36,14 +36,23 @@ $TopImagesData = [
         </div>
     </header>
 
-    <br><br><br>
     <div>
+        <?php
+           if  (isset($_GET['Request']) && $_GET['Request'] == "SignIn") {
+           ?>
+        <div class="ImageBanner" style="width: 100vw; height: 30vh; background-image: url('https://i.pinimg.com/736x/2e/40/dc/2e40dc63dacbb648982ddc2589a76356.jpg');">
+                <h1 style="text-align:center; font-family: 'Caveat'; color: white; text-shadow: 5px 5px 10px black; font-size: 86px; padding-top: 5%;">
+                Welcome Back to Snappy Cloud!
+            </h1>
+        </div>
+        <?php } ?>
         <div class="FormLogin">
            <?php
            if  (isset($_GET['Request']) && $_GET['Request'] == "SignIn") {
            ?>
              <form action="Connections/PROCESS_Login.php" method="Post">
-                <h2 style="font-size: 36px; font-family: 'Comic Neue';">Make a New Account</h2>
+                <br><br>
+                <h2 style="font-size: 36px; font-family: 'Comic Neue';">Log In to An Account</h2>
                 <input type="hidden" name="Method" id="Method" value="SignIn">
                 <p class="Font-ComicBold" style="font-size: x-large;">Username:</p>
                 <input class="Input1" type="text" name="Username" id="Username" placeholder="Username" required>
@@ -51,13 +60,12 @@ $TopImagesData = [
                 <input class="Input1" type="password" name="Password" id="Password" placeholder="Your Account's Secret Code!" required>
 
                 <br><br>
-
-                <br>
                 <button type="submit" style="width: 40%; margin-left: 30%; margin-right: 30%; font-size: x-large;">Continue</button>
                 </form>
                 <br>
                 <a href="?Request=SignUp" style="text-align: center; font-family: 'Comic Neue';">
                     <p>Create a new account.</p></a>
+                <br><br><br><br>
            <?php
            } else {
            ?>

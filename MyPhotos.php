@@ -137,9 +137,17 @@ if (isset($_SESSION['UserId']) && $_SESSION['UserId'] != 0) {
                     
                     <!-- Added Total Likes -->
                     <p style="font-family: Arial; font-size: 25px; font-weight: bold;">❤️Likes: <?php echo $TotalLikes; ?></p>
-                    
                     <p style="font-family: 'Comic Neue'; font-size: 25px;"><?php echo $SafeDescription; ?></p>
-                    <p style="font-family: Monospace; font-size: 20px; color: #00a37dff;">Date Uploaded: <?php echo $UploadDate; ?></p>
+
+                    <div style="display: flex; align-items: center;">
+                        <form action="EditUploadedFile.php" method="POST">
+                            <input type="hidden" name="Method" value="Photo">
+                            <input type="hidden" name="FotoId" value="<?php echo $FotoId; ?>">
+                            <input type="hidden" name="CurrentPhotoTitle" value="<?php echo $SafeTitle; ?>">
+                            <input type="hidden" name="CurrentPhotoDescription" value="<?php echo $SafeDescription; ?>">
+                            <button type="submit" style="font-size: 20px;">Edit</button></form>
+                        <p style="font-family: Monospace; font-size: 20px; color: #00a37dff; padding-left: 10px;">Date Uploaded: <?php echo $UploadDate; ?></p>
+                    </div>
                 </div>
             <?php
                 }

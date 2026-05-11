@@ -80,8 +80,15 @@ if (isset($_GET["Request"]) && $_GET["Request"] == "LogOut") {
                 <p style="font-family: Arial; font-size: 35px; font-weight: bold;"><?php echo $Row['NamaAlbum'];?></p>
                 <p style="font-family: Arial; font-size: 30px; font-weight: bold;">📸<?php echo $TotalPhotos;?></p>
                 <p style="font-family: Arial; font-size: 25px;"><?php echo $Row['Deskripsi'];?></p>
-                <p style="font-family: Monospace; font-size: 20px; color: #00a37dff;">Date Created: <?php echo $Row['TanggalDibuat'];?></p>
-            
+                <div style="display: flex; align-items: center;">
+                        <form action="EditUploadedFile.php" method="POST">
+                            <input type="hidden" name="Method" value="Album">
+                            <input type="hidden" name="AlbumId" value="<?php echo $Row["AlbumId"]; ?>">
+                            <input type="hidden" name="AlbumName" value="<?php echo $Row['NamaAlbum']; ?>">
+                            <input type="hidden" name="AlbumDescription" value="<?php echo $Row['Deskripsi']; ?>">
+                            <button type="submit" style="font-size: 20px;">Edit</button></form>
+                <p style="font-family: Monospace; font-size: 20px; color: #00a37dff; padding-left: 10px;">Date Created: <?php echo $Row['TanggalDibuat'];?></p>
+                </div>
             </div>
         <?php
             }

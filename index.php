@@ -75,7 +75,12 @@ if ($Row = $Result->fetch_assoc()) {
         <div style="display: flex;" width="90vw">
             <div class="LandingTextFrame1 SoftShadowedBox" style="width: 30%; margin-left: 5px; margin-right: 5px;">
                 <div class="TopImageTitle" style="font-size: 25px; color: white;">Starting With Over</div>
-                <div class="TopImageTitle" style="font-size: 48px; color: white;">1+ Photos</div>
+                <?php
+                $sql = "SELECT COUNT(*) FROM foto";
+                $result = mysqli_query($ServerConnection, $sql);
+                $Row = mysqli_fetch_array($result);
+                ?>
+                <div class="TopImageTitle" style="font-size: 48px; color: white;"><?php echo $Row[0];?>+ Photos</div>
                 <div>
                     <img src="Sources\Images\ImagesIcon.png" alt="" style="width: 20%; margin-left: 40%; margin-right: 40%;">
                 </div>
@@ -84,7 +89,12 @@ if ($Row = $Result->fetch_assoc()) {
 
             <div class="LandingTextFrame1 SoftShadowedBox" style="width: 30%; margin-left: 5px; margin-right: 5px;">
                 <div class="TopImageTitle" style="font-size: 25px; color: white;">And Over</div>
-                <div class="TopImageTitle" style="font-size: 48px; color: white;">1+ Members</div>
+                <?php
+                $sql = "SELECT COUNT(*) FROM user";
+                $result = mysqli_query($ServerConnection, $sql);
+                $Row = mysqli_fetch_array($result);
+                ?>
+                <div class="TopImageTitle" style="font-size: 48px; color: white;"><?php echo $Row[0];?>+ Members</div>
                 <div>
                     <img src="Sources\Images\UsersIcon.png" alt="" style="width: 20%; margin-left: 40%; margin-right: 40%;">
                 </div>
@@ -93,7 +103,12 @@ if ($Row = $Result->fetch_assoc()) {
 
             <div class="LandingTextFrame1 SoftShadowedBox" style="width: 30%; margin-left: 5px; margin-right: 5px;">
                 <div class="TopImageTitle" style="font-size: 25px; color: white;">Along With</div>
-                <div class="TopImageTitle" style="font-size: 48px; color: white;">1+ Albums</div>
+                <?php
+                $sql = "SELECT COUNT(*) FROM album";
+                $result = mysqli_query($ServerConnection, $sql);
+                $Row = mysqli_fetch_array($result);
+                ?>
+                <div class="TopImageTitle" style="font-size: 48px; color: white;"><?php echo $Row[0];?>+ Albums</div>
                 <div>
                     <img src="Sources\Images\FolderCameraIcon.png" alt="" style="width: 20%; margin-left: 40%; margin-right: 40%;">
                 </div>

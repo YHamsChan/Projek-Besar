@@ -64,14 +64,14 @@ if (isset($_GET["Request"]) && $_GET["Request"] == "LogOut") {
             <p style="font-family: 'Comic Neue'; font-size: 25px;"><b>Address: </b><?php echo $CompleteData['Alamat']; ?></p>
             <p style="font-family: 'Comic Neue'; font-size: 25px;"><b>Date Joined: </b><?php echo $CompleteData['DateJoined']; ?></p>
         </div>
-        <br><br>
+        <br><br><br>
         <div class="ShadowedBox" style="margin-left: 5%; margin-right: 50%; width: 45%; border-radius: 20px; padding: 1%; padding-left: 2%;">
             <p style="font-family: 'Caveat Brush'; font-size: 30px;">Special Setting:</p>
             <br>
             <button style="font-size: 25px;"><a href="?Request=LogOut" class="A-Clean" style="font-family: 'Comic Neue';"><p><b>Log Out</b></p></a></button>
         </div>
         </div>
-        <br><br>
+        <br><br><br><br>
         <?php
         } else {
         ?>
